@@ -22,16 +22,16 @@ const subjects = {
 
 const ExamSection: FC<ExamSectionProps> = ({ title, description, examType }) => {
   return (
-    <section className="py-16 px-4">
+    <section className="py-10 md:py-16 px-4">
       <div className="container mx-auto">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold mb-4">{title}</h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
+        <div className="text-center mb-8 md:mb-12">
+          <h2 className="text-2xl md:text-3xl font-bold mb-3 md:mb-4">{title}</h2>
+          <p className="text-sm md:text-base text-muted-foreground max-w-2xl mx-auto">
             {description}
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
           {subjects[examType].map((subject, index) => (
             <SubjectCard
               key={index}

@@ -11,23 +11,25 @@ interface SubjectCardProps {
 
 const SubjectCard: FC<SubjectCardProps> = ({ title, price, icon, examType }) => {
   return (
-    <Card className="border border-border hover:border-primary/40 transition-all hover:shadow-md animate-fade-in">
-      <CardHeader className="pb-2">
-        <CardTitle className="flex items-center justify-between">
+    <Card className="border border-border hover:border-primary/40 transition-all hover:shadow-md animate-fade-in h-full">
+      <CardHeader className="pb-2 pt-4 px-4">
+        <CardTitle className="flex items-center justify-between text-base md:text-lg">
           <span>{title}</span>
-          <span className="text-2xl">{icon}</span>
+          <span className="text-xl md:text-2xl">{icon}</span>
         </CardTitle>
       </CardHeader>
-      <CardContent>
-        <div className="text-sm text-muted-foreground mb-4">
-          {examType === "oge" ? "ОГЭ" : "ЕГЭ"} 2024
+      <CardContent className="px-4 pb-4">
+        <div className="text-xs md:text-sm text-muted-foreground mb-3">
+          {examType === "oge" ? "ОГЭ" : "ЕГЭ"} 2025
         </div>
-        <div className="text-2xl font-bold text-primary">
+        <div className="text-xl md:text-2xl font-bold text-primary">
           {price} ₽
         </div>
       </CardContent>
-      <CardFooter>
-        <Button className="w-full bg-primary hover:bg-primary/90">Купить</Button>
+      <CardFooter className="px-4 pb-4">
+        <Button className="w-full bg-primary hover:bg-primary/90 text-sm md:text-base py-1.5">
+          Купить
+        </Button>
       </CardFooter>
     </Card>
   );

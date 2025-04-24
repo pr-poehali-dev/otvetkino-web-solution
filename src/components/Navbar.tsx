@@ -8,9 +8,9 @@ const Navbar = () => {
 
   return (
     <nav className="bg-primary text-primary-foreground fixed w-full z-10 shadow-md">
-      <div className="container mx-auto px-4 py-3 flex justify-between items-center">
+      <div className="container mx-auto px-4 py-2 flex justify-between items-center">
         <Link to="/" className="flex items-center space-x-2">
-          <img src="/logo.svg" alt="OTVETKINO" className="h-12" />
+          <img src="/logo.svg" alt="OTVETKINO" className="h-10 md:h-12" />
         </Link>
         
         {/* Desktop Menu */}
@@ -36,6 +36,7 @@ const Navbar = () => {
         <button 
           className="md:hidden"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
+          aria-label="Меню"
         >
           {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
@@ -43,8 +44,8 @@ const Navbar = () => {
       
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="md:hidden bg-primary text-primary-foreground py-4">
-          <div className="container mx-auto px-4 flex flex-col space-y-4">
+        <div className="md:hidden bg-primary text-primary-foreground py-2 absolute w-full shadow-lg">
+          <div className="container mx-auto px-4 flex flex-col space-y-3">
             <Link 
               to="/" 
               className="hover:text-secondary transition-colors py-2"
@@ -74,7 +75,7 @@ const Navbar = () => {
               О нас
             </Link>
             <Button 
-              className="bg-accent hover:bg-accent/90 w-full"
+              className="bg-accent hover:bg-accent/90 w-full my-1"
               onClick={() => setIsMenuOpen(false)}
             >
               Купить сейчас
