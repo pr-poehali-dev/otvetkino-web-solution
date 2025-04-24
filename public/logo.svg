@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500">
+  <defs>
+    <style>
+      .logo-bg { fill: #9333ea; }
+      .logo-text { fill: #ffffff; font-family: Arial, sans-serif; font-weight: bold; }
+      .oge-badge { fill: #fbbf24; rx: 8; ry: 8; }
+      .ege-badge { fill: #fb923c; rx: 8; ry: 8; }
+      .oge-text, .ege-text { fill: #7c2d12; font-family: Arial, sans-serif; font-weight: bold; }
+      .orbit { fill: none; stroke: #ffffff; stroke-width: 2; }
+      .orbit-dot { fill: #ffffff; }
+      .year-text { fill: #ffffff; font-family: Arial, sans-serif; font-weight: bold; }
+    </style>
+  </defs>
+  
+  <!-- Background (making it transparent in SVG) -->
+  <rect class="logo-bg" width="500" height="500" opacity="0"/>
+  
+  <!-- Orbits -->
+  <ellipse class="orbit" cx="250" cy="250" rx="180" ry="100"/>
+  <ellipse class="orbit" cx="250" cy="250" rx="160" ry="120" transform="rotate(45 250 250)"/>
+  
+  <!-- Main logo text -->
+  <text class="logo-text" x="250" y="265" text-anchor="middle" font-size="48">OTVETKINO</text>
+  
+  <!-- OGE Badge -->
+  <rect class="oge-badge" x="100" y="170" width="60" height="30"/>
+  <text class="oge-text" x="130" y="192" text-anchor="middle" font-size="20">ОГЭ</text>
+  
+  <!-- EGE Badge -->
+  <rect class="ege-badge" x="340" y="330" width="60" height="30"/>
+  <text class="ege-text" x="370" y="352" text-anchor="middle" font-size="20">ЕГЭ</text>
+  
+  <!-- Orbit dots -->
+  <circle class="orbit-dot" cx="130" cy="250" r="4"/>
+  <circle class="orbit-dot" cx="370" cy="250" r="4"/>
+  
+  <!-- Year -->
+  <text class="year-text" x="250" y="400" text-anchor="middle" font-size="32">2025</text>
+</svg>

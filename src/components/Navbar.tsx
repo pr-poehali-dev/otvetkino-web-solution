@@ -10,7 +10,7 @@ const Navbar = () => {
     <nav className="bg-primary text-primary-foreground fixed w-full z-10 shadow-md">
       <div className="container mx-auto px-4 py-3 flex justify-between items-center">
         <Link to="/" className="flex items-center space-x-2">
-          <span className="text-2xl font-bold">OTVETKINO</span>
+          <img src="/logo.svg" alt="OTVETKINO" className="h-12" />
         </Link>
         
         {/* Desktop Menu */}
